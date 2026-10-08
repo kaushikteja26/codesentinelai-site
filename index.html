@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeSentinelAI — AI-powered code auditing and automated remediation using static analysis and LLM reasoning.">
+  <title>CodeSentinelAI — AI-Powered Code Auditing</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #080b12;
+      color: #f4f7fb;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1c2330;
+    }
+    .brand { font-weight: 800; letter-spacing: -0.04em; font-size: 21px; }
+    .brand span { color: #7cf29a; }
+    .nav-links { display: flex; gap: 24px; color: #aab4c4; font-size: 14px; }
+    .nav-links a:hover { color: #fff; }
+    .hero { padding: 105px 0 85px; text-align: center; }
+    .badge {
+      display: inline-block;
+      border: 1px solid #24412e;
+      background: #0c1710;
+      color: #8ff3a5;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 0 auto 22px;
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -0.065em;
+    }
+    .gradient { background: linear-gradient(90deg, #fff, #a8f8b9); -webkit-background-clip: text; color: transparent; }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 34px;
+      color: #aab4c4;
+      font-size: 19px;
+    }
+    .buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 13px 19px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid #293243;
+      background: #121824;
+    }
+    .btn.primary { background: #7cf29a; color: #07100a; border-color: #7cf29a; }
+    .btn:hover { transform: translateY(-1px); }
+    section { padding: 78px 0; border-top: 1px solid #171e29; }
+    .eyebrow { color: #7cf29a; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+    h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.05; letter-spacing: -.045em; margin: 12px 0 18px; }
+    .lead { color: #aab4c4; max-width: 760px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+    .card {
+      padding: 25px;
+      border: 1px solid #202938;
+      background: #0d121b;
+      border-radius: 16px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 19px; }
+    .card p { margin: 0; color: #98a4b6; font-size: 15px; }
+    .pipeline {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .step {
+      border: 1px solid #202938;
+      background: #0d121b;
+      border-radius: 14px;
+      padding: 22px 15px;
+      text-align: center;
+    }
+    .num { color: #7cf29a; font-weight: 800; font-size: 13px; }
+    .step strong { display: block; margin-top: 7px; }
+    .tech { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    .pill {
+      border: 1px solid #293243;
+      color: #c7d0dd;
+      background: #101620;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+    .cta {
+      text-align: center;
+      background: #0c121a;
+      border: 1px solid #202938;
+      border-radius: 22px;
+      padding: 55px 25px;
+    }
+    footer { padding: 32px 0 45px; color: #7f8b9d; font-size: 13px; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: 1fr; }
+      .hero { padding-top: 75px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#">Code<span>SentinelAI</span></a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#tech">Technology</a>
+        <a href="https://github.com/kaushikteja26/python_code_auditor">GitHub</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="badge">AI-POWERED CODE AUDITING</div>
+      <h1>From <span class="gradient">error detection</span> to validated fixes.</h1>
+      <p>
+        CodeSentinelAI explores an autonomous workflow that combines deterministic
+        static analysis with LLM reasoning to detect, analyze, correct, and validate Python code.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="https://github.com/kaushikteja26/python_code_auditor">View on GitHub</a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+    </header>
+
+    <section id="how">
+      <div class="eyebrow">The workflow</div>
+      <h2>Detect. Analyze. Correct. Validate.</h2>
+      <p class="lead">
+        Traditional linters can identify problems, while AI can reason about code.
+        CodeSentinelAI explores bringing those capabilities together in a controlled loop.
+      </p>
+      <div class="pipeline">
+        <div class="step"><div class="num">01</div><strong>Detect</strong><span>Static analysis</span></div>
+        <div class="step"><div class="num">02</div><strong>Analyze</strong><span>AI reasoning</span></div>
+        <div class="step"><div class="num">03</div><strong>Correct</strong><span>Generate a fix</span></div>
+        <div class="step"><div class="num">04</div><strong>Validate</strong><span>Check the result</span></div>
+        <div class="step"><div class="num">05</div><strong>Verify</strong><span>Return outcome</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Why it matters</div>
+      <h2>Make code auditing an active workflow.</h2>
+      <div class="grid">
+        <div class="card"><h3>Deterministic checks</h3><p>Use Ruff and execution feedback to ground the auditing process in concrete diagnostics.</p></div>
+        <div class="card"><h3>AI reasoning</h3><p>Use an LLM to interpret errors and propose context-aware corrections.</p></div>
+        <div class="card"><h3>Validation loop</h3><p>Don't stop at generating a patch. Check whether the proposed correction actually works.</p></div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <div class="eyebrow">Technology</div>
+      <h2>Built for developer workflows.</h2>
+      <p class="lead">The current development version uses a local LLM architecture and deterministic Python tooling.</p>
+      <div class="tech">
+        <span class="pill">Python</span>
+        <span class="pill">Ruff</span>
+        <span class="pill">Ollama</span>
+        <span class="pill">LLM Agents</span>
+        <span class="pill">Code Analysis</span>
+        <span class="pill">Automated Remediation</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <div class="eyebrow">Open source project</div>
+        <h2>Explore the implementation.</h2>
+        <p class="lead" style="margin: 0 auto 25px;">
+          CodeSentinelAI is an experimental project exploring AI-assisted software auditing and remediation.
+        </p>
+        <a class="btn primary" href="https://github.com/kaushikteja26/python_code_auditor">Open the GitHub repository →</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 CodeSentinelAI · Built as an independent developer project.
+    </footer>
+  </div>
+</body>
+</html>
